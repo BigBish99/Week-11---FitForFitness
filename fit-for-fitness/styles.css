@@ -1,0 +1,100 @@
+/* Sport / Fitness themed site styles */
+
+/* Page background: energetic, sporty gradient (brightened) */
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	/* brightened gradient compared to original darker tones */
+	background: linear-gradient(180deg, #123b4d 0%, #0b7a5e 48%, #08313a 100%);
+	color: #e8f8f6;
+}
+
+/* Navigation bar */
+nav {
+	background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+	border-bottom: 2px solid rgba(255,255,255,0.04);
+	padding: 1rem 0.5rem;
+	text-align: center; /* center links */
+}
+
+nav a {
+	color: #cfe9e3;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 0.75rem;
+	padding: 0.35rem 0.5rem;
+	border-radius: 6px;
+	font-weight: 600;
+	transition: color 150ms ease, background-color 150ms ease, transform 120ms ease;
+}
+
+/* white text on hover with subtle background accent */
+nav a:hover,
+nav a:focus {
+	color: #ffffff;
+	background-color: rgba(255,255,255,0.06);
+	transform: translateY(-1px);
+}
+
+/* Make the nav visually stronger on small screens */
+@media (max-width: 576px) {
+	nav a { margin: 0 0.5rem; padding: 0.5rem 0.6rem; }
+}
+
+/* Container tweaks so content stands apart from the dark background */
+.container {
+	background: darkgray;
+	padding: 1.25rem 1rem;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(3,8,12,0.6);
+	color: #eef6f5;
+}
+
+/* Headings */
+h1, h2, h3 {
+	color: #f1fbfa;
+	letter-spacing: 0.2px;
+}
+
+/* Footer styling */
+footer {
+	background: linear-gradient(90deg,#042028, #062a20);
+	color: #d7f2ef;
+	text-align: center;
+	padding: 1.5rem 0.5rem;
+    margin-top: 2rem;
+	border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Buttons */
+.btn-primary {
+	background-color: #0d6efd; /* keep bootstrap primary but slightly brighter */
+	border-color: #0d6efd;
+}
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #0b5ed7;
+	border-color: #0a58ca;
+}
+
+/* Table adjustments for visibility on dark background */
+.table {
+ 	color: #0b0b0b; /* dark text for readability on lighter table container */
+}
+.table thead th {
+ 	color: #000000; /* make table head text black as requested */
+}
+
+/* Lighter table container so white elements and table contrast well */
+.table-container {
+    background-color: #f3f4f6; /* light gray that still contrasts with white elements */
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+/* Small utility: visually-hidden caption is fine, but ensure contrast where used */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
+
+/* Make form labels more legible */
+label.form-label { color: #d7f2ef; }
+
